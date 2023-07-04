@@ -1699,6 +1699,7 @@ subroutine capillary_resistance(nelem,vessel_type,rheology_type,press_in,press_o
       numparallel = 1 !Number of convolute units in parallel !dummy variable of 1 but could be updated if needed
       !Actual variables
       numseries = 3 !Number of terminal villi in a row from a single mature intermediate villous
+
       numparallel_cap = num_parallel !Number of parallel capillaries in an imaged convolute (leiser)
       numconvolutes = num_convolutes!number of  terminal conduits in a single feeding vessel
       numgens = num_generations
