@@ -86,7 +86,7 @@ configure_file(pre_setup.in.py ${SETUP_PRE_GEN_PY_FILE} @ONLY)
 # Create the Python __init__.py file.
 add_custom_command(
 #  TARGET pybindings
-  COMMAND ${CMAKE_COMMAND} -E touch ${PYTHON_PACKAGE_INIT_FILE_DESTINATION}
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/__init__.py" ${PYTHON_PACKAGE_INIT_FILE_DESTINATION}
   PRE_BUILD
   OUTPUT "${PYTHON_PACKAGE_INIT_FILE_DESTINATION}"
   COMMENT  "creating __init__.py file ({event: PRE_BUILD}, {filename: __init__.py})"
