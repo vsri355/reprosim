@@ -3,7 +3,9 @@
 set(LIB_SRCS
   arrays.f90
   diagnostics.f90
+  fetal.f90
   geometry.f90
+  imports.f90
   indices.f90
   math_utilities.f90
   other_consts.f90
@@ -22,6 +24,7 @@ set_target_properties(reprosim_obj PROPERTIES
   POSITION_INDEPENDENT_CODE TRUE)
 
 if (MSVC)
+  target_compile_options(reprosim_obj PUBLIC -fpp)
   # Visual Studio requires a dummy file as it will not build a library from only objects.
   set(dummy_file "${CMAKE_CURRENT_BINARY_DIR}/dummy.f90")
   file(WRITE ${dummy_file} "module dummy
@@ -35,6 +38,7 @@ add_library(reprosim $<TARGET_OBJECTS:reprosim_obj> ${dummy_file})
 
 set_target_properties(reprosim PROPERTIES
   Fortran_VISIBILITY_PRESET hidden
+  Fortran_MODULE_DIRECTORY "${REPROSIM_MODULE_DIRECTORY}"
   C_VISIBILITY_PRESET hidden
   VISIBILITY_INLINES_HIDDEN 1)
 
