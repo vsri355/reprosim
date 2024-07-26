@@ -23,9 +23,9 @@ jobs:
             os: ubuntu-20.04,
           }
         - {
-            name: "macOS Big Sur 11",
+            name: "macOS Ventura 13",
             build_type: "Release",
-            os: macos-11,
+            os: macos-13,
           }
     steps:
 # Useful for debugging dll load issues.
