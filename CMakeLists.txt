@@ -55,7 +55,6 @@ endif()
 
 # Set whether to build bindgins or not, may require SWIG
 option(REPROSIM_BUILD_BINDINGS "Build bindings for ${PROJECT}, may require SWIG" YES)
-message(STATUS "REPROSIM_BUILD_BINDINGS: ${REPROSIM_BUILD_BINDINGS}")
 
 # Set base install location
 if(NOT INSTALL_PREFIX)

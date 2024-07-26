@@ -3,8 +3,6 @@ add_subdirectory(c)
 
 find_package(SWIG QUIET)
 mark_as_advanced(SWIG_EXECUTABLE)
-message(STATUS "SWIG_FOUND: ${SWIG_FOUND}")
-message(STATUS "SWIG_EXECUTABLE: ${SWIG_EXECUTABLE}")
 
 if(SWIG_FOUND)
   option(REPROSIM_BUILD_PYTHON_BINDINGS "Build Python bindings for ${PROJECT_NAME}" YES)
