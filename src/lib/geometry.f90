@@ -408,7 +408,7 @@ contains
     art_ven_elem_map = ne_map
 
     if(diagnostics_level.GE.1)then
-       do umb_outlet_counter=1,2
+       do umb_outlet_counter=1,num_outlets
           if(umbilical_outlets(umb_outlet_counter).GT.0)then
              print *,"venous umbilical outlet element number",umbilical_outlets(umb_outlet_counter)
           endif
@@ -2054,6 +2054,7 @@ end subroutine define_capillary_model
 
     !Calculate generations, Horsfield orders, Strahler orders
     !.....Calculate branch generations
+
 
     elem_ordrs = 0
     maxgen=1
