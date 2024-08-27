@@ -6,7 +6,3 @@
 #IDE project docs
 .idea
 .project
-
-
-#Windows cmake stuff
-out*
