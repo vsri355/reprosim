@@ -1,8 +1,0 @@
-
-*.pyc
-#Mac files
-.DS_Store
-
-#IDE project docs
-.idea
-.project
