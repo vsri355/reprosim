@@ -2292,7 +2292,7 @@ subroutine update_radius_by_order(order,new_radius,update_type,control_parameter
     use indices
     use diagnostics, only: enter_exit, get_diagnostics_level
     implicit none
-  !DEC$ ATTRIBUTES DLLEXPORT,ALIAS:"SO_UPDATE_RADIUS_BY_ORDER" :: UPDATE_RADIUS_BY ORDER
+  !DEC$ ATTRIBUTES DLLEXPORT,ALIAS:"SO_UPDATE_RADIUS_BY_ORDER" :: UPDATE_RADIUS_BY_ORDER
     !!! Parameters
     integer, intent(in) :: order
     real(dp), intent(in) :: new_radius
